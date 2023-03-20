@@ -13,7 +13,7 @@ function addBook() {
 }
 btn.addEventListener('submit', addBook);
 
-// display
+// display book
 function displayBlock() {
   container.innerHTML = '';
   bookList.forEach((book, index) => {
@@ -25,17 +25,18 @@ function displayBlock() {
   });
 }
 
+// remove function
 function remove(index) {
   bookList.splice(index, 1);
   localStorage.setItem('book-list', JSON.stringify(bookList));
   displayBlock();
 }
 displayBlock();
-// remove btn
-// const btnRemove = document.querySelector('.remove');
+
 container.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     const index = e.target.getAttribute('data-index');
     remove(index);
   }
 });
+
