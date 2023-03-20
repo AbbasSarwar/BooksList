@@ -39,4 +39,3 @@ container.addEventListener('click', (e) => {
     remove(index);
   }
 });
-
