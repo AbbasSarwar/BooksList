@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="book-list"></div>
+
+    <input type="text" name="" id="title-input">
+    <input type="text" name="" id="author-input">
+    <input type="submit" value="submit" id="submit-button">
+    
+    <script>
+        // Retrieve the book list from localStorage, or initialize it if it doesn't exist
+let bookList = JSON.parse(localStorage.getItem('bookList')) || [];
+
+// Function to add a book to the list and update the display and localStorage
+function addBook() {
+  // Get the title and author values from the input fields
+  let title = document.getElementById('title-input').value;
+  let author = document.getElementById('author-input').value;
+
+  // Create a new book object with the title and author properties
+  let book = {title: title, author: author};
+
+  // Add the book to the book list
+  bookList.push(book);
+
+  // Save the updated book list to localStorage
+  localStorage.setItem('bookList', JSON.stringify(bookList));
+
+  // Clear the input fields
+  document.getElementById('title-input').value = '';
+  document.getElementById('author-input').value = '';
+
+  // Update the display of the book list
+  let bookListElement = document.getElementById('book-list');
+  let bookElement = document.createElement('li');
+  bookElement.textContent = `${title} by ${author}`;
+  bookListElement.appendChild(bookElement);
+}
+
+// Add an event listener to the submit button to call the addBook function
+let submitButton = document.getElementById('submit-button');
+submitButton.addEventListener('click', addBook);
+
+// Display the existing book list on page load
+for (let book of bookList) {
+  let bookListElement = document.getElementById('book-list');
+  let bookElement = document.createElement('li');
+  bookElement.textContent = `${book.title} by ${book.author}`;
+  bookListElement.appendChild(bookElement);
+}
+
+    </script>
+</body>
+</html>
