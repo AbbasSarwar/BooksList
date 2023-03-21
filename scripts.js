@@ -18,6 +18,7 @@ class Book {
     localStorage.setItem('book-list', JSON.stringify(bookList));
   }
 
+  // display method
   displayBlock() {
     container.innerHTML = '';
     bookList.forEach((book, index) => {
@@ -31,7 +32,7 @@ class Book {
         `;
     });
   }
-
+// remove method
   remove(index) {
     bookList.splice(index, 1);
     localStorage.setItem('book-list', JSON.stringify(bookList));
@@ -44,6 +45,7 @@ const book = new Book();
 btn.addEventListener('submit', book.addBook);
 book.displayBlock();
 
+// eventliststener
 container.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     const index = e.target.getAttribute('data-index');
