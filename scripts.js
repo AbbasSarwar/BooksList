@@ -18,9 +18,8 @@ function displayBlock() {
   container.innerHTML = '';
   bookList.forEach((book, index) => {
     container.innerHTML += `<ul class="Books">
-    <li>${book.title}</li>
-    <li>${book.author}</li>
-    <li><button class = "remove" onlick= "remove()" data-index="${index}">Remove</button></li>
+    <li class="inps">"${book.title}" by ${book.author}</li>
+    <li class="btnclass"><button class = "remove" onlick= "remove()" data-index="${index}">Remove</button></li>
     </ul>`;
   });
 }
