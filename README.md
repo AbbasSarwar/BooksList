@@ -110,7 +110,9 @@ In order to run this project you need:
 
 👤 **Author2**
 
-- GitHub: [@Kanyi](https://github.com/jkanyi-web)
+- GitHub: [@Naledi-Dikgale](https://github.com/Naledi-Dikgale)
+- LinkedIn: [Naledi-Dikgale](https://www.linkedin.com/in/naledi-dikgale-068423159/)
+
 
 <!-- FUTURE FEATURES -->
 

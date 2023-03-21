@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+}
+
+ul li {
+  padding: 5px 20px;
+}
+
+section {
+  padding: 10px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  gap: 5px;
+}
+
+input {
+  width: 20%;
+  height: 3.5vh;
+  text-indent: 5px;
+}
