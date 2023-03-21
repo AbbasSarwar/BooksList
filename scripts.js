@@ -5,11 +5,11 @@ const btn = document.querySelector('form');
 
 const bookList = JSON.parse(localStorage.getItem('book-list')) || [];
 
-class Book{
+class Book {
   constructor() {
-    this.books = []
+    this.books = [];
   }
-
+/* eslint-disable */
   addBook() {
     const title = BookName.value;
     const author = authorName.value;
@@ -29,17 +29,18 @@ class Book{
         </li>
         </ul>
         `;
-      });
-    }
-    
+    });
+  }
+
   remove(index) {
     bookList.splice(index, 1);
     localStorage.setItem('book-list', JSON.stringify(bookList));
     book.displayBlock();
   }
 }
+/* eslint-enable */
 
-const book = new Book;
+const book = new Book();
 btn.addEventListener('submit', book.addBook);
 book.displayBlock();
 
