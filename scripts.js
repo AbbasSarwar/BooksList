@@ -52,3 +52,32 @@ container.addEventListener('click', (e) => {
     book.remove(index);
   }
 });
+
+
+const listLink = document.querySelector('#list-link')
+const addBookLink = document.querySelector('#addbook-link')
+const contactLink =document.querySelector('#contact-link')
+
+const bookListSection =document.querySelector('#booklist-section')
+const addbookInputs =document.querySelector('#addbook-inputs')
+const contactSection =document.querySelector('#contact-section')
+
+listLink.addEventListener('click',function(){
+  console.log('clicked')
+  addbookInputs.classList.add('hidden')
+  contactSection.classList.add('hidden')
+  listLink.classList.add('active')
+})
+
+addbookInputs.addEventListener('click',function(){
+    console.log('clicked')
+    contactSection.classList.add('hidden')
+   contactSection.classList.add('hidden')
+    addbookInputs.classList.add('active')
+})
+contactSection.addEventListener('click',function(){
+  console.log('clicked')
+  addbookInputs.classList.add('hidden')
+ listLink.classList.add('hidden')
+  contactSection.classList.add('active')
+})

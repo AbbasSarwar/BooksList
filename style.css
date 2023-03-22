@@ -4,6 +4,38 @@
   box-sizing: border-box;
 }
 
+
+.overall-navi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #000;
+}
+
+.wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-wrap ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+
+
+
+
 .collection {
   border: 1px solid black;
   display: flex;
@@ -11,6 +43,22 @@
   flex-direction: column;
   width: 60%;
 }
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+.active {
+  color: aqua;
+}
+
+.active:active {
+  color: aqua;
+}
+
 
 ul {
   list-style: none;
