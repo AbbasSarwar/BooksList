@@ -53,31 +53,45 @@ container.addEventListener('click', (e) => {
   }
 });
 
+const listLink = document.querySelector('#list-link');
+const addBookLink = document.querySelector('#addbook-link');
+const contactLink = document.querySelector('#contact-link');
 
-const listLink = document.querySelector('#list-link')
-const addBookLink = document.querySelector('#addbook-link')
-const contactLink =document.querySelector('#contact-link')
+const bookListSection = document.querySelector('#booklist-section');
+const addbookInputs = document.querySelector('#addbook-inputs');
+const contactSection = document.querySelector('#contact-section');
 
-const bookListSection =document.querySelector('#booklist-section')
-const addbookInputs =document.querySelector('#addbook-inputs')
-const contactSection =document.querySelector('#contact-section')
+listLink.addEventListener('click', () => {
+  bookListSection.classList.add('visible');
+  addbookInputs.classList.add('hidden');
+  contactSection.classList.add('hidden');
+  addbookInputs.classList.remove('visible');
+  contactSection.classList.remove('visible');
+});
 
-listLink.addEventListener('click',function(){
-  console.log('clicked')
-  addbookInputs.classList.add('hidden')
-  contactSection.classList.add('hidden')
-  listLink.classList.add('active')
-})
+addBookLink.addEventListener('click', () => {
+  bookListSection.classList.remove('visible');
+  contactSection.classList.remove('visible');
+  bookListSection.classList.add('hidden');
+  contactSection.classList.add('hidden');
+  addbookInputs.classList.add('visible');
+});
+contactLink.addEventListener('click', () => {
+  addbookInputs.classList.add('hidden');
+  bookListSection.classList.add('hidden');
+  contactSection.classList.add('visible');
+  addbookInputs.classList.remove('visible');
+  bookListSection.classList.remove('visible');
+});
 
-addbookInputs.addEventListener('click',function(){
-    console.log('clicked')
-    contactSection.classList.add('hidden')
-   contactSection.classList.add('hidden')
-    addbookInputs.classList.add('active')
-})
-contactSection.addEventListener('click',function(){
-  console.log('clicked')
-  addbookInputs.classList.add('hidden')
- listLink.classList.add('hidden')
-  contactSection.classList.add('active')
-})
+const dateContainer = document.querySelector('.top-info');
+const date = new Date();
+dateContainer.innerHTML = `<p><span class="date">${date.toLocaleString('en-US', { month: 'long' })} ${date.getDay()} ${date.getFullYear()}</span>, <span class="time">${date.toLocaleTimeString()}</span></p>`;
+
+function hover(e){
+  let links = document.getElementsByTagName("a")
+	for(let i =0; i < links.length; i++){
+		links[i].classList.remove("active")
+	}
+  e.currentTarget.classList.add('active')
+}
