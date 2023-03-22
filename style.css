@@ -172,3 +172,8 @@ footer {
   align-items: end;
   padding-bottom: 10px;
 }
+
+.top-info p {
+  font-size: 16px;
+  font-weight: 500;
+}
