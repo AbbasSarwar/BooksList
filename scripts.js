@@ -88,7 +88,6 @@ const dateContainer = document.querySelector('.top-info');
 const date = new Date();
 dateContainer.innerHTML = `<p><span class="date">${date.toLocaleString('en-US', { month: 'long' })} ${date.getDay()} ${date.getFullYear()}</span>, <span class="time">${date.toLocaleTimeString()}</span></p>`;
 
-/* eslint-disable */
 function hover(e) {
   const links = document.getElementsByTagName('a');
   for (let i = 0; i < links.length; i += 1) {
@@ -96,3 +95,4 @@ function hover(e) {
   }
   e.currentTarget.classList.add('active');
 }
+hover(this);
