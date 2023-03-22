@@ -12,22 +12,22 @@
     <div class="wrapper">
       <header class="overall-navi">
         <div class="nav-1">
-          <a href="/" class="logo">My Logo</a>
+          <a href="#" class="logo">Awesome Books</a>
         </div>
 
         <div class="nav-2">
           <nav>
             <ul class="desktop-navi">
               <li>
-                <a id="list-link" class="nav-links">Lists</a>
+                <a href="#booklist-section" id="list-link" onclick="hover(event)" class="nav-links">Lists</a>
               </li>
               <li>
-                <a id="addbook-link" class="nav-links"
+                <a href="#addbook-inputs" id="addbook-link" onclick="hover(event)" class="nav-links"
                   >Add books</a
                 >
               </li>
               <li>
-                <a  id="contact-link" class="nav-links"
+                <a href="#contact-section" id="contact-link" onclick="hover(event)" class="nav-links"
                   >Contact</a
                 >
               </li>
@@ -35,13 +35,15 @@
           </nav>
         </div>
       </header>
-      <section id="booklist-section">
+      <section class="top-info">
+      </section>
+      <section id="booklist-section" class="ok">
         <h1>Books List</h1>
         <div class="collection"></div>
         <span></span>
       </section>
 
-      <section id="addbook-inputs">
+      <section id="addbook-inputs" class="hidden">
         <div class="inputs">
           <h1>Add a new book</h1>
           <form action="">
@@ -64,7 +66,7 @@
         </div>
       </section>
 
-      <section id="contact-section">
+      <section id="contact-section" class="hidden">
         <div class="contact-wrap">
           <h1>Contact Information</h1>
           <p>
@@ -78,6 +80,9 @@
           </ul>
         </div>
       </section>
+      <footer>
+        <p>&#169; Copyright &nbsp;&nbsp;&nbsp; ...</p>
+      </footer>
     </div>
   </body>
 </html>
