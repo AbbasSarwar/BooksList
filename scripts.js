@@ -88,10 +88,11 @@ const dateContainer = document.querySelector('.top-info');
 const date = new Date();
 dateContainer.innerHTML = `<p><span class="date">${date.toLocaleString('en-US', { month: 'long' })} ${date.getDay()} ${date.getFullYear()}</span>, <span class="time">${date.toLocaleTimeString()}</span></p>`;
 
-function hover(e){
-  let links = document.getElementsByTagName("a")
-	for(let i =0; i < links.length; i++){
-		links[i].classList.remove("active")
-	}
-  e.currentTarget.classList.add('active')
+/* eslint-disable */
+function hover(e) {
+  const links = document.getElementsByTagName('a');
+  for (let i = 0; i < links.length; i += 1) {
+    links[i].classList.remove('active');
+  }
+  e.currentTarget.classList.add('active');
 }

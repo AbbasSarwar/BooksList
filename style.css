@@ -11,30 +11,41 @@
   justify-content: space-between;
   border: 2px solid #000;
 }
+
 .inputs {
   padding: 20px 0;
 }
+
 .inputs h1 {
   padding-bottom: 10px;
 }
+
 #booklist-section h1 {
-  padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
 .wrapper {
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
+
   /* gap: 30px; */
   height: 100vh;
 }
+
+nav ul li a {
+  text-decoration: none;
+}
+
 .nav-1 {
   padding: 0 40px;
 }
-.nav-1 a{
+
+.nav-1 a {
   text-decoration: none;
   color: #000;
 }
+
 .contact-wrap {
   display: flex;
   flex-direction: column;
@@ -42,9 +53,11 @@
   padding: 20px 0;
 }
 
-.contact-wrap ul, p {
-  font-size: 20px;
-  font-weight: 500;
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
 }
 
 nav ul {
@@ -52,13 +65,16 @@ nav ul {
   display: flex;
   flex-direction: row;
 }
+
+.contact-wrap ul,
+p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 nav ul li {
   padding: 5px 20px;
   border-right: 1px solid black;
-}
-
-nav ul li a {
-  text-decoration: none;
 }
 
 .contact-wrap ul {
@@ -92,15 +108,8 @@ nav ul li a {
   color: aqua;
 }
 
-
 ul:nth-child(2n) {
   background-color: rgb(227, 225, 225);
-}
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  padding: 10px 10px;
 }
 
 .inps {
@@ -146,6 +155,7 @@ input[type="submit"] {
   height: 4vh;
   float: right;
 }
+
 footer {
   display: flex;
   padding: 10px 10px;
@@ -155,13 +165,10 @@ footer {
   bottom: 5px;
   border: 1px solid black;
 }
+
 .top-info {
   display: flex;
   justify-content: end;
   align-items: end;
   padding-bottom: 10px;
-}
-.top-info p{
-  font-size: 16px ;
-  font-weight: 500;
 }
