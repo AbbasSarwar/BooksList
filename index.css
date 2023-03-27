@@ -9,7 +9,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid #000;
+  border: 2px solid #6c6c6c;
+  box-shadow: 0 1px 15px rgb(93, 91, 91);
+}
+
+.work {
+  height: 81vh;
 }
 
 .inputs {
@@ -22,16 +27,9 @@
 
 #booklist-section h1 {
   padding-bottom: 10px;
+  font-size: 25px;
 }
 
-.wrapper {
-  padding: 5px 10px;
-  display: flex;
-  flex-direction: column;
-
-  /* gap: 30px; */
-  height: 100vh;
-}
 
 nav ul li a {
   text-decoration: none;
@@ -49,8 +47,9 @@ nav ul li a {
 .contact-wrap {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 20px 0;
+  gap: 10px;
+  padding: 10px 0;
+  height: 100%;
 }
 
 ul {
@@ -70,6 +69,7 @@ nav ul {
 p {
   font-size: 20px;
   font-weight: 500;
+  font-family: sans-serif;
 }
 
 nav ul li {
@@ -85,27 +85,17 @@ nav ul li {
 }
 
 .collection {
-  border: 1px solid black;
   display: flex;
   justify-content: start;
   flex-direction: column;
   width: 100%;
 }
 
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: flex;
-}
-
 .active {
   color: blue;
 }
-
-.active:active {
-  color: aqua;
+.card {
+  display: none;
 }
 
 ul:nth-child(2n) {
@@ -130,7 +120,6 @@ input {
 
 form input {
   width: 20vw;
-  border: 1px solid black;
   height: 5vh;
 }
 
@@ -138,7 +127,6 @@ section {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -159,11 +147,9 @@ input[type="submit"] {
 footer {
   display: flex;
   padding: 10px 10px;
-  margin-top: 40vh;
-  position: fixed;
-  width: 98%;
-  bottom: 5px;
+  width: 100%;
   border: 1px solid black;
+  margin: auto;
 }
 
 .top-info {
@@ -176,4 +162,7 @@ footer {
 .top-info p {
   font-size: 16px;
   font-weight: 500;
+}
+.visible {
+  display: flex;
 }
