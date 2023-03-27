@@ -10,4 +10,4 @@ export const displayBlock = () => {
       <li><button class = "remove" onlick= "remove()" data-index="${index}">Remove</button></li>
       </ul>`;
   });
-}
+};

@@ -1,7 +1,7 @@
 import { DisplaySec } from './modules/display-sections.js';
 
 // add Book
-import {addBook} from './modules/add-book.js';
+import { addBook } from './modules/add-book.js';
 
 // Display books
 import { displayBlock } from './modules/display-books.js';
