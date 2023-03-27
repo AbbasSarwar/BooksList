@@ -30,3 +30,11 @@ container.addEventListener('click', (e) => {
     location.reload()
   }
 });
+
+
+const dateContainer = document.querySelector('.top-info')
+import { DateTime } from "./modules/luxon.js";
+setInterval(()=>{
+const MyTime = new Date()
+    dateContainer.innerHTML = MyTime.toLocaleString(DateTime.DATETIME_MED) 
+}, 1000)
