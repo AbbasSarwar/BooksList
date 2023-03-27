@@ -30,7 +30,6 @@
   font-size: 25px;
 }
 
-
 nav ul li a {
   text-decoration: none;
 }
@@ -94,6 +93,7 @@ nav ul li {
 .active {
   color: blue;
 }
+
 .card {
   display: none;
 }
@@ -163,6 +163,7 @@ footer {
   font-size: 16px;
   font-weight: 500;
 }
+
 .visible {
   display: flex;
 }

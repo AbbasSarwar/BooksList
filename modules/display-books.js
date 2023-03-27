@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 const container = document.querySelector('.collection');
 const bookList = JSON.parse(localStorage.getItem('book-list')) || [];
- function displayBlock() {
+export function displayBlock() {
   container.innerHTML = '';
   bookList.forEach((book, index) => {
     container.innerHTML += `<ul class="Books">
@@ -10,9 +11,3 @@ const bookList = JSON.parse(localStorage.getItem('book-list')) || [];
       </ul>`;
   });
 }
-export function remove(index) {
-  bookList.splice(index, 1);
-  localStorage.setItem('book-list', JSON.stringify(bookList));
-displayBlock();
-}
-export {displayBlock}

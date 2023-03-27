@@ -1,13 +1,14 @@
 import { DisplaySec } from './modules/display-sections.js';
 
 // add Book
-import { addBook } from './modules/add-book.js';
+import addBook from './modules/add-book.js';
 
 // Display books
 import { displayBlock } from './modules/display-books.js';
 
 // remove book
 import { remove } from './modules/remove-book.js';
+import { DateTime } from './modules/luxon.js';
 
 const a = document.querySelectorAll('.alink');
 a[0].addEventListener('click', (event) => {
@@ -27,14 +28,13 @@ container.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON') {
     const index = e.target.getAttribute('data-index');
     remove(index);
-    location.reload()
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
   }
 });
 
-
-const dateContainer = document.querySelector('.top-info')
-import { DateTime } from "./modules/luxon.js";
-setInterval(()=>{
-const MyTime = new Date()
-    dateContainer.innerHTML = MyTime.toLocaleString(DateTime.DATETIME_MED) 
-}, 1000)
+const dateContainer = document.querySelector('.top-info');
+setInterval(() => {
+  const MyTime = new Date();
+  dateContainer.innerHTML = MyTime.toLocaleString(DateTime.DATETIME_MED);
+}, 1000);
