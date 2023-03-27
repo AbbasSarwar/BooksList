@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 const BookName = document.querySelector('#book');
 const authorName = document.querySelector('#author');
 
